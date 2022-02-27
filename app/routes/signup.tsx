@@ -3,6 +3,7 @@ import InputField from '~/components/input'
 import Button from '~/components/button';
 import SignupValidator from '~/components/Signup/validator';
 import invariant from 'tiny-invariant'
+import { name } from '../constants/brand';
 
 interface ErrorsReturn {
     name: string | null;
@@ -26,22 +27,22 @@ export default function SignupPage() {
     return (
         <div className='p-8 text-center justify-center'>
             <Form method='post' className='text-center justify-center shadow-md p-5 '>   
-            <h1 className='text-black font-bold text-4xl'>
+            <h1 className='text-center text-black font-bold text-4xl'>
               Sign Up for the Hackthon Today!
             </h1>
-            <p className='py-3 font-semibold text-lg'>Register for the amazing hackathon</p>
-               <div className='text-center w-screen'>
-                <InputField
-                      name='name'
-                      error={formData?.name} 
-                />
-                <InputField 
-                      name='password'
-                      error={formData?.password}
-                />
-                <Button>
-                    Sign Up for StemIST hacks
-                </Button> 
+            <p className='text-center py-3 font-semibold text-lg'>Register for the amazing hackathon</p>
+               <div className='border border-emerald-200 text-center w-screen'>
+                    <InputField
+                        name='name'
+                        error={formData?.name} 
+                    />
+                    <InputField 
+                        name='password'
+                        error={formData?.password}
+                    />
+                    <Button>
+                        Sign Up for {name} hacks
+                    </Button> 
                </div>
             </Form>
         </div>

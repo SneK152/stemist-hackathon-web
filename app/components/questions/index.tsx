@@ -22,21 +22,21 @@ export default function Question({answer, question, color}: {answer: string, que
         y: isToggled ? 180 : 0
     });
     return (
-    <div className='max-h-fit h-fit px-3 text-2xl mx-1 rounded-md'>
-        <animated.button
+    <div onClick={() => setToggle(!isToggled)} className='cursor-pointer max-h-fit h-fit px-3 text-2xl mx-1 rounded-md'>
+        <animated.div
             style={questionSpring}
-            className="rounded-lg w-screen text-left flex pl-2 py-3"
+            className="cursor-pointer rounded-lg w-screen text-left flex pl-2 py-3"
             onClick={() => setToggle(!isToggled)}
         >
             {question} ?
             
-            <animated.p className={`pl-2`} style={{
+            <animated.p className={`cursor-pointer pl-2`} onClick={() => setToggle(!isToggled)}  style={{
                 transform: arrowSpring.y.to(y => `rotateX(${y}deg)`)
             }}>
             
                 {arrow}
             </animated.p>
-        </animated.button>
+        </animated.div>
         <animated.div style={answerSpring} className={`rounded-lg pl-2 py-3`}>
             {isToggled ? answer : null}
         </animated.div>

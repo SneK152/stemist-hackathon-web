@@ -29,7 +29,7 @@ export default function InputField({name, error}: InputFieldProps) {
                     style={FieldSpring} 
                     onFocus={() => setFocused(true)} 
                     onBlur={() => setFocused(false)} 
-                    className='px-7 shadow-md py-3 rounded-md w-3/5 border-8 border-black'
+                    className='px-4 shadow-md py-3 rounded-md w-3/5 border-8 border-black'
                     placeholder={`Enter your ${name} here...`}
                 />
             </div>
