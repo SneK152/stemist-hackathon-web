@@ -31,7 +31,7 @@ export default function SignupPage() {
               Sign Up for the Hackthon Today!
             </h1>
             <p className='text-center py-3 font-semibold text-lg'>Register for the amazing hackathon</p>
-               <div className='border border-emerald-200 text-center w-screen'>
+               <div className='text-center w-screen'>
                     <InputField
                         name='name'
                         error={formData?.name} 
