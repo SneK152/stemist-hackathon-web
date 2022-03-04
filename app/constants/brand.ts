@@ -1,1 +1,1 @@
-export let name: string = "STEMist"
+export let name: string = "STEMist";
